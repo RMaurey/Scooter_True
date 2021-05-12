@@ -11,10 +11,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Scooter
+  - Ground
+  - Big_Tree
+  - BackYard_First
   - 
   - 
   - 
@@ -40,4 +40,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackYard_First
+    uniqueID: 3712416387
+    locked: 0
+  - name: Scooter
+    uniqueID: 2474937965
+    locked: 0
+  - name: Moon
+    uniqueID: 1390002243
+    locked: 0
+  - name: Ground
+    uniqueID: 3871424771
+    locked: 0
+  - name: Big_Tree
+    uniqueID: 675879849
+    locked: 0
+  - name: New Layer
+    uniqueID: 2706156359
     locked: 0
