@@ -1,0 +1,33 @@
+{
+    "name": "ControlScooter",
+    "maps": [
+        {
+            "name": "ControlScooter",
+            "id": "fd689052-f040-41dc-9bbd-5aeaac34f95d",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "d669647c-aaad-414a-8870-946a0a60f62d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "58f0f318-d90f-4ba6-a0f6-d6456c080760",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
