@@ -15,13 +15,21 @@ public class @ControlScooter : IInputActionCollection, IDisposable
     ""name"": ""ControlScooter"",
     ""maps"": [
         {
-            ""name"": ""ControlScooter"",
+            ""name"": ""Scooter"",
             ""id"": ""fd689052-f040-41dc-9bbd-5aeaac34f95d"",
             ""actions"": [
                 {
-                    ""name"": ""New action"",
+                    ""name"": ""Jump"",
                     ""type"": ""Button"",
                     ""id"": ""d669647c-aaad-414a-8870-946a0a60f62d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Lateral"",
+                    ""type"": ""Button"",
+                    ""id"": ""4d78d22b-0e51-4234-9cde-f16ce27f2405"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -31,22 +39,56 @@ public class @ControlScooter : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""58f0f318-d90f-4ba6-a0f6-d6456c080760"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""New action"",
+                    ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""2ffe9777-fd4f-4e39-89bc-4de727371337"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Lateral"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""b6e57ac0-12a2-4e42-9fb8-0dbbc5b97f37"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Lateral"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""fb3e5183-c79c-45c1-981d-7b11b9632bb0"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Lateral"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
     ],
     ""controlSchemes"": []
 }");
-        // ControlScooter
-        m_ControlScooter = asset.FindActionMap("ControlScooter", throwIfNotFound: true);
-        m_ControlScooter_Newaction = m_ControlScooter.FindAction("New action", throwIfNotFound: true);
+        // Scooter
+        m_Scooter = asset.FindActionMap("Scooter", throwIfNotFound: true);
+        m_Scooter_Jump = m_Scooter.FindAction("Jump", throwIfNotFound: true);
+        m_Scooter_Lateral = m_Scooter.FindAction("Lateral", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -93,40 +135,49 @@ public class @ControlScooter : IInputActionCollection, IDisposable
         asset.Disable();
     }
 
-    // ControlScooter
-    private readonly InputActionMap m_ControlScooter;
-    private IControlScooterActions m_ControlScooterActionsCallbackInterface;
-    private readonly InputAction m_ControlScooter_Newaction;
-    public struct ControlScooterActions
+    // Scooter
+    private readonly InputActionMap m_Scooter;
+    private IScooterActions m_ScooterActionsCallbackInterface;
+    private readonly InputAction m_Scooter_Jump;
+    private readonly InputAction m_Scooter_Lateral;
+    public struct ScooterActions
     {
         private @ControlScooter m_Wrapper;
-        public ControlScooterActions(@ControlScooter wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Newaction => m_Wrapper.m_ControlScooter_Newaction;
-        public InputActionMap Get() { return m_Wrapper.m_ControlScooter; }
+        public ScooterActions(@ControlScooter wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Jump => m_Wrapper.m_Scooter_Jump;
+        public InputAction @Lateral => m_Wrapper.m_Scooter_Lateral;
+        public InputActionMap Get() { return m_Wrapper.m_Scooter; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(ControlScooterActions set) { return set.Get(); }
-        public void SetCallbacks(IControlScooterActions instance)
+        public static implicit operator InputActionMap(ScooterActions set) { return set.Get(); }
+        public void SetCallbacks(IScooterActions instance)
         {
-            if (m_Wrapper.m_ControlScooterActionsCallbackInterface != null)
+            if (m_Wrapper.m_ScooterActionsCallbackInterface != null)
             {
-                @Newaction.started -= m_Wrapper.m_ControlScooterActionsCallbackInterface.OnNewaction;
-                @Newaction.performed -= m_Wrapper.m_ControlScooterActionsCallbackInterface.OnNewaction;
-                @Newaction.canceled -= m_Wrapper.m_ControlScooterActionsCallbackInterface.OnNewaction;
+                @Jump.started -= m_Wrapper.m_ScooterActionsCallbackInterface.OnJump;
+                @Jump.performed -= m_Wrapper.m_ScooterActionsCallbackInterface.OnJump;
+                @Jump.canceled -= m_Wrapper.m_ScooterActionsCallbackInterface.OnJump;
+                @Lateral.started -= m_Wrapper.m_ScooterActionsCallbackInterface.OnLateral;
+                @Lateral.performed -= m_Wrapper.m_ScooterActionsCallbackInterface.OnLateral;
+                @Lateral.canceled -= m_Wrapper.m_ScooterActionsCallbackInterface.OnLateral;
             }
-            m_Wrapper.m_ControlScooterActionsCallbackInterface = instance;
+            m_Wrapper.m_ScooterActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Newaction.started += instance.OnNewaction;
-                @Newaction.performed += instance.OnNewaction;
-                @Newaction.canceled += instance.OnNewaction;
+                @Jump.started += instance.OnJump;
+                @Jump.performed += instance.OnJump;
+                @Jump.canceled += instance.OnJump;
+                @Lateral.started += instance.OnLateral;
+                @Lateral.performed += instance.OnLateral;
+                @Lateral.canceled += instance.OnLateral;
             }
         }
     }
-    public ControlScooterActions @ControlScooter => new ControlScooterActions(this);
-    public interface IControlScooterActions
+    public ScooterActions @Scooter => new ScooterActions(this);
+    public interface IScooterActions
     {
-        void OnNewaction(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
+        void OnLateral(InputAction.CallbackContext context);
     }
 }

@@ -2,13 +2,21 @@
     "name": "ControlScooter",
     "maps": [
         {
-            "name": "ControlScooter",
+            "name": "Scooter",
             "id": "fd689052-f040-41dc-9bbd-5aeaac34f95d",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "Jump",
                     "type": "Button",
                     "id": "d669647c-aaad-414a-8870-946a0a60f62d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Lateral",
+                    "type": "Button",
+                    "id": "4d78d22b-0e51-4234-9cde-f16ce27f2405",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -18,13 +26,46 @@
                 {
                     "name": "",
                     "id": "58f0f318-d90f-4ba6-a0f6-d6456c080760",
-                    "path": "",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "2ffe9777-fd4f-4e39-89bc-4de727371337",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Lateral",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "b6e57ac0-12a2-4e42-9fb8-0dbbc5b97f37",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Lateral",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "fb3e5183-c79c-45c1-981d-7b11b9632bb0",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Lateral",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }
