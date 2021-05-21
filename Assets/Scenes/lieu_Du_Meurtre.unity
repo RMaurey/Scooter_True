@@ -326,7 +326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947115474077503797, guid: f2c2036795a55dc4f828d022db5fd7fb, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5854610515328119463, guid: f2c2036795a55dc4f828d022db5fd7fb, type: 3}
       propertyPath: m_RootOrder
@@ -411,7 +411,7 @@ GameObject:
   - component: {fileID: 381246345}
   - component: {fileID: 381246347}
   - component: {fileID: 381246346}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -504,7 +504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947115474077503797, guid: f2c2036795a55dc4f828d022db5fd7fb, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5854610515328119463, guid: f2c2036795a55dc4f828d022db5fd7fb, type: 3}
       propertyPath: m_RootOrder
@@ -604,6 +604,36 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1 &635123222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 635123223}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &635123223
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635123222}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.182, y: -0.692, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1828748405}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &653260035
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,7 +996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947115474077503797, guid: f2c2036795a55dc4f828d022db5fd7fb, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5854610515328119463, guid: f2c2036795a55dc4f828d022db5fd7fb, type: 3}
       propertyPath: m_RootOrder
@@ -1356,7 +1386,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947115474077503797, guid: f2c2036795a55dc4f828d022db5fd7fb, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5854610515328119463, guid: f2c2036795a55dc4f828d022db5fd7fb, type: 3}
       propertyPath: m_RootOrder
@@ -1789,10 +1819,8 @@ GameObject:
   - component: {fileID: 1828748404}
   - component: {fileID: 1828748403}
   - component: {fileID: 1828748406}
-  - component: {fileID: 1828748407}
   - component: {fileID: 1828748409}
   - component: {fileID: 1828748408}
-  - component: {fileID: 1828748410}
   m_Layer: 0
   m_Name: Scooter
   m_TagString: Untagged
@@ -1880,7 +1908,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.02, y: 0.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 635123223}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1899,21 +1928,10 @@ MonoBehaviour:
   speed: 5
   maxSpeed: 10
   jumpForce: 5
---- !u!111 &1828748407
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828748402}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  RaycastStartTransform: {fileID: 635123223}
+  Layer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!70 &1828748408
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1927,8 +1945,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.21067715, y: 0.020869493}
-  m_Size: {x: 0.9277687, y: 1.4286361}
+  m_Offset: {x: -0.23171186, y: -0.15119171}
+  m_Size: {x: 0.7810602, y: 1.0845137}
   m_Direction: 0
 --- !u!50 &1828748409
 Rigidbody2D:
@@ -1951,20 +1969,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1828748410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828748402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6754adfeeb81524ba932125210f5b0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceGround: 0.1
-  isGrounded: 0
 --- !u!1001 &1944195836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2044,7 +2048,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947115474077503797, guid: f2c2036795a55dc4f828d022db5fd7fb, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5854610515328119463, guid: f2c2036795a55dc4f828d022db5fd7fb, type: 3}
       propertyPath: m_RootOrder

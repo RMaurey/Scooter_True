@@ -15,7 +15,9 @@ public class Scooter : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float maxSpeed;
     [SerializeField] private float jumpForce;
-    //[SerializeField] private Transform RaycastStartTransform;
+    [SerializeField] private Transform RaycastStartTransform;
+    [SerializeField] private LayerMask Layer;
+
     
     
     
@@ -31,23 +33,15 @@ public class Scooter : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private float direction;
     private Animator animator;
-
-    private bool canJump = false;
-    
-
-
-    
+    private CapsuleCollider2D capColl2D;
+   
 
 
 
-    
-     
 
 
-    
 
     // COMMANDES //
-
 
 
 
@@ -70,9 +64,10 @@ public class Scooter : MonoBehaviour
 
 
     private void JumpOnperformed(InputAction.CallbackContext obj)
-    { 
-       rgdb2.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-       canJump = false;
+    {
+        if (Physics2D.Raycast(RaycastStartTransform.position,Vector2.down , 0.1f, Layer))   
+            rgdb2.AddForce(jumpForce * transform.up, ForceMode2D.Impulse);
+
 
     }
 
@@ -83,24 +78,26 @@ public class Scooter : MonoBehaviour
         if (direction > 0)
         {
             spriteRenderer.flipX = false;
+            
+
         }
         else
         {
             spriteRenderer.flipX = true;
+            
+
         }
+
+        animator.SetBool("Running", true);
     }
+
         
     private void Lateralcanceled(InputAction.CallbackContext obj)
     {
         direction = 0;
+        animator.SetBool("Running", false);
     }
    
-        // Animator //
-
-    
-  
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -108,6 +105,7 @@ public class Scooter : MonoBehaviour
         rgdb2 = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        capColl2D = GetComponent<CapsuleCollider2D>();
 
     }
 
@@ -115,31 +113,7 @@ public class Scooter : MonoBehaviour
     void Update()
     {
 
-        //var hit = Physics2D.Raycast(RaycastStartTransform.position, new Vector2(0, -1), 0.01f);
-        //Debug.DrawRay(transform.position, new Vector2(0, -1) * 0.001f);
-
-        /*if (hit.collider != null)
-        {
-            canJump = true;
-        }
-
-        else 
-        {
-            canJump = false;
-        }
-
-        */
-        var horizontalSpeed = Mathf.Abs(rgdb2.velocity.x);
-        if (horizontalSpeed < maxSpeed)
-            
-            animator.SetBool("Run", true); // ne pas oublier de mettre un parametre en fonction de. Bool > True or false. Float valeur décimal ...
         
-        //if (Input.);
-
-
-
-
-
 
     }
 
@@ -152,13 +126,12 @@ public class Scooter : MonoBehaviour
             rgdb2.AddForce(new Vector2(speed * direction, 0));
         }
 
+    
         
-        var verticalSpeed = rgdb2.velocity.y;
+        
 
 
-      
-
-
+       
 
 
 
