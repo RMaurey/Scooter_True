@@ -324,6 +324,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground_+2
       objectReference: {fileID: 0}
+    - target: {fileID: 4947115474077503797, guid: f2c2036795a55dc4f828d022db5fd7fb, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5854610515328119463, guid: f2c2036795a55dc4f828d022db5fd7fb, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -497,6 +501,10 @@ PrefabInstance:
     - target: {fileID: 4947115474077503797, guid: f2c2036795a55dc4f828d022db5fd7fb, type: 3}
       propertyPath: m_Name
       value: Ground_-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4947115474077503797, guid: f2c2036795a55dc4f828d022db5fd7fb, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5854610515328119463, guid: f2c2036795a55dc4f828d022db5fd7fb, type: 3}
       propertyPath: m_RootOrder
@@ -742,7 +750,7 @@ GameObject:
   - component: {fileID: 671299558}
   - component: {fileID: 671299560}
   - component: {fileID: 671299559}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -956,6 +964,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground_-2
       objectReference: {fileID: 0}
+    - target: {fileID: 4947115474077503797, guid: f2c2036795a55dc4f828d022db5fd7fb, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5854610515328119463, guid: f2c2036795a55dc4f828d022db5fd7fb, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1033,7 +1045,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1014042513}
   - component: {fileID: 1014042512}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1151,7 +1163,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 9077888171270263960, guid: f8a6e41e2356f2e46b591f227fde06c0, type: 3}
+  m_Sprite: {fileID: -3320179558381801285, guid: c705001b7a5869f489628f84834c4043, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1170,7 +1182,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508469551}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.77, y: 0.689, z: 0}
+  m_LocalPosition: {x: -3.77, y: 0.874, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1225,18 +1237,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.06255695}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.25, y: 1.375}
+    oldSize: {x: 5.3125, y: 1.75}
     newSize: {x: 1.25, y: 1.375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.25, y: 1.375}
+  m_Size: {x: 1.25, y: 1.6263657}
   m_EdgeRadius: 0
 --- !u!1 &1538317582
 GameObject:
@@ -1341,6 +1353,10 @@ PrefabInstance:
     - target: {fileID: 4947115474077503797, guid: f2c2036795a55dc4f828d022db5fd7fb, type: 3}
       propertyPath: m_Name
       value: Ground_+1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4947115474077503797, guid: f2c2036795a55dc4f828d022db5fd7fb, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5854610515328119463, guid: f2c2036795a55dc4f828d022db5fd7fb, type: 3}
       propertyPath: m_RootOrder
@@ -1550,7 +1566,7 @@ GameObject:
   - component: {fileID: 1749564019}
   - component: {fileID: 1749564021}
   - component: {fileID: 1749564020}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Back_Sky_Full
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1776,6 +1792,7 @@ GameObject:
   - component: {fileID: 1828748407}
   - component: {fileID: 1828748409}
   - component: {fileID: 1828748408}
+  - component: {fileID: 1828748410}
   m_Layer: 0
   m_Name: Scooter
   m_TagString: Untagged
@@ -1879,9 +1896,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f62aa8d2e33ad4587e7330d77a4bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  maxSpeed: 15
-  jumpForce: 15
+  speed: 5
+  maxSpeed: 10
+  jumpForce: 5
 --- !u!111 &1828748407
 Animation:
   m_ObjectHideFlags: 0
@@ -1910,8 +1927,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06062603, y: 0}
-  m_Size: {x: 0.69124794, y: 1.0625}
+  m_Offset: {x: -0.21067715, y: 0.020869493}
+  m_Size: {x: 0.9277687, y: 1.4286361}
   m_Direction: 0
 --- !u!50 &1828748409
 Rigidbody2D:
@@ -1934,6 +1951,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1828748410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828748402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6754adfeeb81524ba932125210f5b0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceGround: 0.1
+  isGrounded: 0
 --- !u!1001 &1944195836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1944,6 +1975,10 @@ PrefabInstance:
     - target: {fileID: 5632553321667065590, guid: 0835b94102b576b49847a15f94ef55a0, type: 3}
       propertyPath: m_Name
       value: Lil_Tree
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632553321667065590, guid: 0835b94102b576b49847a15f94ef55a0, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7833638779945442931, guid: 0835b94102b576b49847a15f94ef55a0, type: 3}
       propertyPath: m_RootOrder
@@ -2006,6 +2041,10 @@ PrefabInstance:
     - target: {fileID: 4947115474077503797, guid: f2c2036795a55dc4f828d022db5fd7fb, type: 3}
       propertyPath: m_Name
       value: Ground_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4947115474077503797, guid: f2c2036795a55dc4f828d022db5fd7fb, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5854610515328119463, guid: f2c2036795a55dc4f828d022db5fd7fb, type: 3}
       propertyPath: m_RootOrder
@@ -2112,6 +2151,10 @@ PrefabInstance:
     - target: {fileID: 1897833534200330176, guid: c7d351faef2e30b42a38d8516f4cf1d9, type: 3}
       propertyPath: m_Name
       value: Big_Tree
+      objectReference: {fileID: 0}
+    - target: {fileID: 1897833534200330176, guid: c7d351faef2e30b42a38d8516f4cf1d9, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6342635427930002982, guid: c7d351faef2e30b42a38d8516f4cf1d9, type: 3}
       propertyPath: m_Tiles.Array.size

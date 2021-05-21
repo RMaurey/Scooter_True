@@ -15,6 +15,11 @@ public class Scooter : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float maxSpeed;
     [SerializeField] private float jumpForce;
+    //[SerializeField] private Transform RaycastStartTransform;
+    
+    
+    
+
 
 
 
@@ -27,12 +32,19 @@ public class Scooter : MonoBehaviour
     private float direction;
     private Animator animator;
 
-
-    //private bool canJump;
-    //public bool isGrounded;
-
+    private bool canJump = false;
+    
 
 
+    
+
+
+
+    
+     
+
+
+    
 
     // COMMANDES //
 
@@ -60,6 +72,8 @@ public class Scooter : MonoBehaviour
     private void JumpOnperformed(InputAction.CallbackContext obj)
     { 
        rgdb2.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+       canJump = false;
+
     }
 
 
@@ -81,7 +95,10 @@ public class Scooter : MonoBehaviour
         direction = 0;
     }
    
+        // Animator //
 
+    
+  
 
 
 
@@ -97,9 +114,34 @@ public class Scooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
 
+        //var hit = Physics2D.Raycast(RaycastStartTransform.position, new Vector2(0, -1), 0.01f);
+        //Debug.DrawRay(transform.position, new Vector2(0, -1) * 0.001f);
+
+        /*if (hit.collider != null)
+        {
+            canJump = true;
+        }
+
+        else 
+        {
+            canJump = false;
+        }
+
+        */
+        var horizontalSpeed = Mathf.Abs(rgdb2.velocity.x);
+        if (horizontalSpeed < maxSpeed)
+            
+            animator.SetBool("Run", true); // ne pas oublier de mettre un parametre en fonction de. Bool > True or false. Float valeur décimal ...
+        
+        //if (Input.);
+
+
+
+
+
+
+    }
 
 
     private void FixedUpdate()
@@ -109,6 +151,18 @@ public class Scooter : MonoBehaviour
         {
             rgdb2.AddForce(new Vector2(speed * direction, 0));
         }
+
+        
+        var verticalSpeed = rgdb2.velocity.y;
+
+
+      
+
+
+
+
+
+
     }
 
 
