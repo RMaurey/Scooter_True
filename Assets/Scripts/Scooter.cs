@@ -8,9 +8,9 @@ using UnityEngine.InputSystem;
 
 public class Scooter : MonoBehaviour
 {
+
+    
     // VARIABLES UNITY //
-
-
 
     [SerializeField] private float speed;
     [SerializeField] private float maxSpeed;
@@ -34,6 +34,7 @@ public class Scooter : MonoBehaviour
     private float direction;
     private Animator animator;
     private CapsuleCollider2D capColl2D;
+    
    
 
 
@@ -50,17 +51,26 @@ public class Scooter : MonoBehaviour
     private void OnEnable()
     {
 
+            // PERFORMED //
+
+
         controls = new ControlScooter();
         controls.Enable();
         controls.Scooter.Jump.performed += JumpOnperformed;
         controls.Scooter.Lateral.performed += LateralOnperformed;
+         
        
 
+            // CANCEL //
+
         controls.Scooter.Lateral.canceled += Lateralcanceled;
+        
         
 
     }
 
+    
+    
 
 
     private void JumpOnperformed(InputAction.CallbackContext obj)
@@ -78,17 +88,19 @@ public class Scooter : MonoBehaviour
         if (direction > 0)
         {
             spriteRenderer.flipX = false;
+            animator.SetBool("Running", true);
             
 
         }
         else
         {
             spriteRenderer.flipX = true;
+            animator.SetBool("Running", true);
             
 
         }
 
-        animator.SetBool("Running", true);
+        
     }
 
         

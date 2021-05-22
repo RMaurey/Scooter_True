@@ -1,0 +1,33 @@
+{
+    "name": "Fire",
+    "maps": [
+        {
+            "name": "Bullet",
+            "id": "310b84bf-e9e1-4612-a38c-4f2e3904b901",
+            "actions": [
+                {
+                    "name": "Shoot",
+                    "type": "Button",
+                    "id": "8e597237-e7bc-45d2-9465-52ab3c40412b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d0545c82-ef29-46fe-b9c8-dc4b8f674f3c",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

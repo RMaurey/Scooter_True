@@ -61,7 +61,7 @@ public class @ControlScooter : IInputActionCollection, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""b6e57ac0-12a2-4e42-9fb8-0dbbc5b97f37"",
-                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -72,7 +72,7 @@ public class @ControlScooter : IInputActionCollection, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""fb3e5183-c79c-45c1-981d-7b11b9632bb0"",
-                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

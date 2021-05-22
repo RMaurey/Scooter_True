@@ -1,31 +1,22 @@
 fileFormatVersion: 2
-guid: 6e761e22d421fda44b320f9a627dbd25
+guid: 855213462c32f574493a111c1236761f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7447094551116746116
-    second: move with FX_0
+      213: 8087286515439505273
+    second: helth bar_0
   - first:
-      213: -4982930175070621285
-    second: move with FX_1
+      213: -7659746576786566548
+    second: helth bar_1
   - first:
-      213: 7874383876374163513
-    second: move with FX_2
+      213: 57591552680381433
+    second: helth bar_2
   - first:
-      213: -3900661201671380613
-    second: move with FX_3
+      213: -1226988951354288082
+    second: helth bar_3
   - first:
-      213: -1510535693194602122
-    second: move with FX_4
-  - first:
-      213: -5168386671329646749
-    second: move with FX_5
-  - first:
-      213: 7278531460873872611
-    second: move with FX_6
-  - first:
-      213: 4066826420906904797
-    second: move with FX_7
+      213: -149178979280872741
+    second: helth bar_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -187,169 +178,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: move with FX_0
+      name: helth bar_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 184
-        width: 20
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48d8f00b905695760800000000000000
-      internalID: 7447094551116746116
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: move with FX_1
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 157
-        width: 25
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b91375e086319dab0800000000000000
-      internalID: -4982930175070621285
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: move with FX_2
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 131
-        width: 27
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93078505a6e674d60800000000000000
-      internalID: 7874383876374163513
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: move with FX_3
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 105
-        width: 19
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b71aa3dbd411ed9c0800000000000000
-      internalID: -3900661201671380613
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: move with FX_4
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 80
+        x: 5
+        y: 50
         width: 22
-        height: 22
+        height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 679569a4acf790be0800000000000000
-      internalID: -1510535693194602122
+      spriteID: 97f049dcc30db3070800000000000000
+      internalID: 8087286515439505273
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: move with FX_5
+      name: helth bar_1
       rect:
         serializedVersion: 2
-        x: 10
-        y: 53
-        width: 23
-        height: 21
+        x: 37
+        y: 50
+        width: 22
+        height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3676889a4b33648b0800000000000000
-      internalID: -5168386671329646749
+      spriteID: c625f1d421d13b590800000000000000
+      internalID: -7659746576786566548
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: move with FX_6
+      name: helth bar_2
       rect:
         serializedVersion: 2
-        x: 9
-        y: 27
-        width: 25
-        height: 20
+        x: 69
+        y: 50
+        width: 22
+        height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e464e3ecc9820560800000000000000
-      internalID: 7278531460873872611
+      spriteID: 9fbc397463b9cc000800000000000000
+      internalID: 57591552680381433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: move with FX_7
+      name: helth bar_3
       rect:
         serializedVersion: 2
-        x: 16
-        y: 1
-        width: 17
-        height: 21
+        x: 5
+        y: 18
+        width: 22
+        height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddc44553515407830800000000000000
-      internalID: 4066826420906904797
+      spriteID: e28d233bc0cd8fee0800000000000000
+      internalID: -1226988951354288082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helth bar_4
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 18
+        width: 22
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda120c32820eedf0800000000000000
+      internalID: -149178979280872741
       vertices: []
       indices: 
       edges: []
@@ -357,7 +285,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e24c67940a55ef4098212640577abbd
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
