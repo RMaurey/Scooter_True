@@ -10,6 +10,10 @@ public class Weapon : MonoBehaviour
     public GameObject Blast;
 
     private Fire controls;
+    private Animator animator;
+    
+    
+
 
     private void OnEnable()
     {
@@ -17,7 +21,6 @@ public class Weapon : MonoBehaviour
         controls.Enable();
 
         controls.Bullet.Shoot.performed += ShootOnPerformed;
-        
     }
 
     private void ShootOnPerformed(InputAction.CallbackContext obj)
@@ -28,16 +31,9 @@ public class Weapon : MonoBehaviour
     
 
 
-
     // Update is called once per frame
     void Update()
     {
         
-       
-
-
-
-
-
     }
 }

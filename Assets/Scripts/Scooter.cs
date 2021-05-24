@@ -18,15 +18,8 @@ public class Scooter : MonoBehaviour
     [SerializeField] private Transform RaycastStartTransform;
     [SerializeField] private LayerMask Layer;
 
-    
-    
-    
-
-
-
 
     // PHYSIQUES //
-
 
 
     private Rigidbody2D rgdb2;
@@ -34,16 +27,20 @@ public class Scooter : MonoBehaviour
     private float direction;
     private Animator animator;
     private CapsuleCollider2D capColl2D;
+    private GameObject young_Bullet;
+
+    private float timer;
+
+    private bool can_move;
+
+    public int bullet_damage = 10;
+
+    public GameObject up_Blast;
+
+
     
    
-
-
-
-
-
-
     // COMMANDES //
-
 
 
     private ControlScooter controls;
@@ -53,31 +50,31 @@ public class Scooter : MonoBehaviour
 
             // PERFORMED //
 
-
+        if(can_move)
+        {
+            
         controls = new ControlScooter();
         controls.Enable();
         controls.Scooter.Jump.performed += JumpOnperformed;
         controls.Scooter.Lateral.performed += LateralOnperformed;
          
-       
-
+      
             // CANCEL //
 
         controls.Scooter.Lateral.canceled += Lateralcanceled;
         
         
+        }
+
 
     }
 
     
-    
-
 
     private void JumpOnperformed(InputAction.CallbackContext obj)
     {
         if (Physics2D.Raycast(RaycastStartTransform.position,Vector2.down , 0.1f, Layer))   
             rgdb2.AddForce(jumpForce * transform.up, ForceMode2D.Impulse);
-
 
     }
 
@@ -88,15 +85,12 @@ public class Scooter : MonoBehaviour
         if (direction > 0)
         {
             spriteRenderer.flipX = false;
-            animator.SetBool("Running", true);
-            
-
+       
         }
         else
         {
-            spriteRenderer.flipX = true;
-            animator.SetBool("Running", true);
             
+            spriteRenderer.flipX = true;
 
         }
 
@@ -106,10 +100,33 @@ public class Scooter : MonoBehaviour
         
     private void Lateralcanceled(InputAction.CallbackContext obj)
     {
+        
         direction = 0;
-        animator.SetBool("Running", false);
+        
     }
-   
+
+    public void Up_damage()
+    {
+       bullet_damage += 10; 
+       //Debug.Log(bullet_damage);
+       
+    }
+    
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.tag == "Power_Up")
+        {
+            Up_damage();
+
+            //Debug.Log(col.name);
+            
+        }
+    }
+
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -118,13 +135,39 @@ public class Scooter : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         capColl2D = GetComponent<CapsuleCollider2D>();
+        can_move = false;
+        StartCoroutine(timer_fadeOut());
+        up_Blast.GetComponent<Blast>().damages = bullet_damage;
 
     }
+
+
+    void EnableController()
+    {
+        if(can_move)
+        OnEnable();
+
+    }
+
+
+    IEnumerator timer_fadeOut()
+    {
+        yield return new WaitForSeconds(2.5f);
+        can_move = true;
+        EnableController();
+        yield break;
+
+    }
+
 
     // Update is called once per frame
     void Update()
     {
+      
+        var horizontalSpeed = Mathf.Abs(rgdb2.velocity.x);
+        animator.SetFloat("Running", Mathf.Abs(horizontalSpeed));  
 
+        //animator.SetBool("Charging", true);
         
 
     }
@@ -138,24 +181,7 @@ public class Scooter : MonoBehaviour
             rgdb2.AddForce(new Vector2(speed * direction, 0));
         }
 
-    
-        
-        
-
-
-       
-
-
-
-
     }
-
-
-
-
-
-
-
 
 
 

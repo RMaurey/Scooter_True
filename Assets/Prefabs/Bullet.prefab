@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 3632171042829197292}
   - component: {fileID: -6058205055671234127}
   m_Layer: 0
-  m_Name: Blast
-  m_TagString: Untagged
+  m_Name: Bullet
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,4 +135,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedBullet: 20
+  damages: 10
   rgbd2Bullet: {fileID: 3169359101377700549}
