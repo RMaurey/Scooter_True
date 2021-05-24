@@ -10,10 +10,10 @@ public class Weapon : MonoBehaviour
     public GameObject Blast;
 
     private Fire controls;
-    private Animator animator;
+    
+    //private Animator animator;
     
     
-
 
     private void OnEnable()
     {
@@ -23,10 +23,10 @@ public class Weapon : MonoBehaviour
         controls.Bullet.Shoot.performed += ShootOnPerformed;
     }
 
-    private void ShootOnPerformed(InputAction.CallbackContext obj)
+    private void ShootOnPerformed(InputAction.CallbackContext obj)           // Produit une Blastos a chaque Input
     {
-        Instantiate(Blast, y_Bullet.position, y_Bullet.rotation);
-    }
+        Instantiate(Blast, y_Bullet.position, y_Bullet.rotation);           // (y_Bullet.position, y_Bullet.rotation) = force le transform a suivre le Joueur
+    }                                                                       
 
     
 

@@ -15,19 +15,12 @@ public class Power_UP : MonoBehaviour
     {
         
     }
-
-
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D col)        
     {
-        if(col.gameObject.tag == "Player" )
+        if(col.gameObject.tag == "Player" )         // Si GO avec tag Player touche le Collider alors ce GO disparait.
         {
-            this.gameObject.SetActive(false);
+            this.gameObject.SetActive(false);           // SetActive(bool) = permet de désactiver un GO
             //Debug.Log(col.name);
         }
     }
-
-
-
-
-
 }

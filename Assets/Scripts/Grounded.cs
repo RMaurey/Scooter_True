@@ -6,16 +6,12 @@ public class Grounded : MonoBehaviour
 {
 
     public float distanceGround;
-
     public bool isGrounded = false;
-
-
 
     // Start is called before the first frame update
     void Start()
     {
         distanceGround = GetComponent<Collider>().bounds.extents.y;
-
     }
 
     // Update is called once per frame
@@ -28,7 +24,5 @@ public class Grounded : MonoBehaviour
         {
             isGrounded = true;
         }
-
-
     }
 }

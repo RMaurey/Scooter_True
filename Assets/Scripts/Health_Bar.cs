@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Health_Bar : MonoBehaviour
 {
 
-    public Slider scooterSlider;
+    public Slider scooterSlider;    
 
     public void SetMaxHealth(int health)
     {
