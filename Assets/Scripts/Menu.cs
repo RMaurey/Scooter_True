@@ -20,7 +20,7 @@ public class Menu : MonoBehaviour
         FadeIn = transform.GetChild(1).GetComponent<Animation>();
         //Debug.Log(FadeIn);
         m_SpriteRenderer = transform.GetChild(1).GetComponent<SpriteRenderer>();
-        m_SpriteRenderer.color = new Color (0f, 0f,0f, 0f);
+        m_SpriteRenderer.color = new Color (0f, 0f, 0f, 0f);
     }    
     // Update is called once per frame
     void Update()
@@ -35,11 +35,10 @@ public class Menu : MonoBehaviour
 
     IEnumerator start_Game()
     {
-        Debug.Log("FDP");
+        
         yield return new WaitForSeconds(1f);
         FadeIn.Play();
         yield return new WaitForSeconds(3f);
-        Debug.Log("FDP2");
         SceneManager.LoadScene("lieu_Du_Meurtre");
         yield break;
     }

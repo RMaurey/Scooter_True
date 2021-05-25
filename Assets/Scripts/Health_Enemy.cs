@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health_Enemy : MonoBehaviour
 {
@@ -9,11 +10,16 @@ public class Health_Enemy : MonoBehaviour
     public int maxHealth_Enemy = 100;
     public int currentHealth_Enemy;
     public Health_Bar healthBar_Enemy;
+    public Slider enemySlider; 
+   
+    
+
+   
 
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth_Enemy = maxHealth_Enemy;  
+        currentHealth_Enemy = maxHealth_Enemy;
     }
 
     // Update is called once per frame
@@ -21,12 +27,14 @@ public class Health_Enemy : MonoBehaviour
     {
       
     }      
-
+            
     void TakeDamage(int damage)
     {
         currentHealth_Enemy -= damage;
         healthBar_Enemy.SetHealth(currentHealth_Enemy);
+
     }
+
     
 
     void TakeDamage()
@@ -39,7 +47,14 @@ public class Health_Enemy : MonoBehaviour
         
         else
             Destroy(this.gameObject);
+
         
+    }
+
+    void Heal_Bar_Enemy_Fade_Out()
+    {   
+        if(currentHealth_Enemy==0)
+            GameObject.Find("Heal_Bar_Enemy").SetActive(false);
     }
 
 
@@ -52,11 +67,11 @@ public class Health_Enemy : MonoBehaviour
             bullet_Damage = col.gameObject.GetComponent<Blast>().damages;
             TakeDamage();
             Destroy(col.gameObject);
+
             
         }
-        
-    }
 
+    }
 
 
 }

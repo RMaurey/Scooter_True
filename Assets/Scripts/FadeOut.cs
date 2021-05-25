@@ -7,7 +7,7 @@ using UnityEngine.UI;           // Obligatoire pour utiliser un Canvas (Text Mes
 public class FadeOut : MonoBehaviour
 {
 
-    Animation fadeOut;          // Declartion de la var de l'Animation dans le script et nommé 
+    Animation fadeOut;          // Declaration de la var de l'Animation dans le script et nommé 
 
     // Start is called before the first frame update
     void Start()

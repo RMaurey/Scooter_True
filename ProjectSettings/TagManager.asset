@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Bullet
   - Power_Up
+  - Enemy_bar
+  - Enemy
   layers:
   - Default
   - TransparentFX
