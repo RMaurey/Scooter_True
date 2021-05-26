@@ -21,7 +21,6 @@ public class Scooter : MonoBehaviour
     private float direction;
     private Animator animator;
     private CapsuleCollider2D capColl2D;
-    //private float timer;
     private bool can_move;
     public int bullet_damage = 10;  
     public GameObject up_Blast;
@@ -111,19 +110,19 @@ public class Scooter : MonoBehaviour
     }
 
 
-    void EnableController()   // Apres les secondes du FadeOut, les touches sont dispos. Cela evite de deplacer le Joueur lors d'un chargement.
-    {                         // Et de se retrouver dans un trou possible lors d'une auto save, proche de celui-ci. Si le cas se presente.  
+    void EnableController()         // Apres les secondes du FadeOut, les touches sont dispos. Cela evite de deplacer le Joueur lors d'un chargement.
+    {                               // Et de se retrouver dans un trou possible lors d'une auto save, proche de celui-ci. Si le cas se presente.  
         if(can_move)
-        OnEnable();
+            OnEnable();
     }
 
 
     IEnumerator timer_fadeOut()                    // Coroutine permettant au Canvas de disparaitre progressivement, de laisser place a la scene principal
-    {                                              // 
+    {                                               
         yield return new WaitForSeconds(2.5f);
-        can_move = true;
+        can_move = true;            // Var permettant de rendre les déplacement disponible, 
         EnableController();
-        yield break;
+        yield break;            // Fin de la Coroutine
     }
 
 
@@ -137,7 +136,7 @@ public class Scooter : MonoBehaviour
 
     private void FixedUpdate()
     {
-        var horizontalSpeed = Mathf.Abs(rgdb2.velocity.x);
+        var horizontalSpeed = Mathf.Abs(rgdb2.velocity.x);          // Math.Abs == Valeur Positive 
         if (horizontalSpeed < maxSpeed)
         {
             rgdb2.AddForce(new Vector2(speed * direction, 0));
